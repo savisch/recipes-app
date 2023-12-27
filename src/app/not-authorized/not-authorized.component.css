@@ -1,0 +1,10 @@
+
+
+.auth-alert {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-top: 200px;
+  text-align: center;
+  color: white;
+  background-color: red;
+}

@@ -1,3 +1,9 @@
 .active-shopping {
   background-color: rgb(102, 143, 231);
 }
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}

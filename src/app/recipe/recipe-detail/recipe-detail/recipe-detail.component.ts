@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Data } from '@angular/router';
 import { ShoppingService } from '../../../shopping/services/shopping.service';
 import { Recipe } from '../../models/recipe.model';
 import { RecipeService } from '../../services/recipes.service';
@@ -21,9 +21,12 @@ export class RecipeDetailComponent {
   ) {}
 
   ngOnInit(): void {
-    this.recipeId = +this.route.snapshot.params['id'];
-    this.getRecipe();
-    this.onRecipeClick();
+    this.route.data.subscribe((data: Data) => {
+      this.recipe = data.recipe;
+    });
+    // this.recipeId = +this.route.snapshot.params['id'];
+    // this.getRecipe();
+    // this.onRecipeClick();
   }
 
   getRecipe(): void {

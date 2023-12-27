@@ -18,8 +18,11 @@ export class RecipeEditComponent {
   ) {}
 
   ngOnInit(): void {
-    this.recipeId = +this.route.snapshot.params['id'];
-    this.getRecipe();
+    this.route.data.subscribe(({ recipe }) => {
+      this.recipe = recipe;
+    });
+    // this.recipeId = +this.route.snapshot.params['id'];
+    // this.getRecipe();
   }
 
   getRecipe(): void {

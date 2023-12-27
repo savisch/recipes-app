@@ -1,0 +1,27 @@
+<app-shopping-list-edit></app-shopping-list-edit>
+<div class="row">
+  <div class="col-xs-10">
+    <hr />
+    <ul class="list-group">
+      <li
+        class="list-group-item"
+        *ngFor="let ingredient of ingredients"
+        appBasicHighlight
+      >
+        {{ ingredient.name }} ({{ ingredient.amount }})
+        <span class="delete-button">
+          <button
+            type="button"
+            class="btn btn-danger"
+            (click)="onDeleteItem(ingredient)"
+            appBetterHighlight
+            [highlightColor]="'black'"
+            [defaultColor]="'white'"
+          >
+            Delete
+          </button>
+        </span>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -24,6 +24,7 @@ export class ShoppingService {
     } else {
       this.ingredients.push(e);
     }
+    alert('Ingredients were added to the Shopping List');
   }
 
   onDeleteItem(deletedIngredient: Ingredient) {

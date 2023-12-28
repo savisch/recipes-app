@@ -8,10 +8,8 @@
   <div class="row">
     <h2>Please Select a Recipe!</h2>
     <div class="col-xs-12" *ngFor="let recipe of recipes">
-      <app-recipe-item
-        [recipe]="recipe"
-        (click)="onRecipeClick($event, recipe)"
-      ></app-recipe-item>
+      <app-recipe-item [recipe]="recipe"></app-recipe-item>
     </div>
   </div>
 </div>
+<!-- (click)="onRecipeClick($event, recipe)" -->

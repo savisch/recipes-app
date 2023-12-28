@@ -29,15 +29,15 @@ export class RecipeDetailComponent {
     // this.onRecipeClick();
   }
 
-  getRecipe(): void {
-    this.recipe = this.recipeService.getRecipe(this.recipeId);
-  }
+  // getRecipe(): void {
+  //   this.recipe = this.recipeService.getRecipe(this.recipeId);
+  // }
 
-  onRecipeClick() {
-    this.recipeService.recipeClicked.subscribe((data) => {
-      this.recipe = data;
-    });
-  }
+  // onRecipeClick() {
+  //   this.recipeService.recipeClicked.subscribe((data) => {
+  //     this.recipe = data;
+  //   });
+  // }
 
   onOptionClick(e: string): void {
     if (e === 'shopping-list') {
